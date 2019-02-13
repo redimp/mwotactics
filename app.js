@@ -457,6 +457,8 @@ MongoClient.connect(connection_string, {reconnectTries:99999999}, function(err, 
 				game = "aw";
 			} else if (req.hostname.indexOf('wowstactic') != -1) {
 				game = "wows";
+			} else if (req.hostname.indexOf('mwotactics') != -1) {
+				game = "mwo";
 			} else {
 				game = "wot";
 			}
