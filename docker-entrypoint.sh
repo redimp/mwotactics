@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e -x
 
+python3 /helper/waitfor.py mongodb 27017
+python3 /helper/waitfor.py redis 6379
+
 cat <<EOF >/usr/src/app/secrets.txt
 {
 	"cookie": "CHANGEME",
