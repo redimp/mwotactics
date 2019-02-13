@@ -460,10 +460,10 @@ MongoClient.connect(connection_string, {reconnectTries:99999999}, function(err, 
 			} else if (req.hostname.indexOf('mwotactics') != -1) {
 				game = "mwo";
 			} else {
-				game = "wot";
+				game = "mwo";
 			}
 		} else {
-			game = "wot";
+			game = "mwo";
 		}
 		set_game(req, res, game);
 		res.render('index', { game: req.session.game, 
