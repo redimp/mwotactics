@@ -1,0 +1,29 @@
+version: '2.0'
+services:
+  # mongo database
+  mongodb:
+    image: bitnami/mongodb:latest
+    restart: always
+    environment:
+      - MONGODB_USERNAME=wottactics
+      - MONGODB_PASSWORD=wottactics
+      - MONGODB_DATABASE=wottactics
+  # redis server
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+  # wottactis nodejs app
+  nodejs:
+    build:
+      context: .
+    depends_on:
+      - mongodb
+      - redis
+    ports:
+      - 8000:80
+    links:
+      - mongodb
+      - redis
+
+# vim:set et ts=8 sts=2 sw=2 ai fenc=utf-8:
