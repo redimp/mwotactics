@@ -17,48 +17,12 @@
 		}
 	</style>
 
-	<div class="container" style='width:100%; position:relative;'>
-		<div class="jumbotron content" style="padding-left:0px; padding-right:0px;">
+	<div class="container" style='width:100%;'>
+		<div class="" style="padding-left:0px; padding-right:0px;">
 			<div id="banner" class="call_to_action" style='width:100%; background-color:#888ecb'>
 				<div class="container" id="big_button_frame" style="text-align:center;">
 					<h1>
-						<% if (game == 'wot') { %>
-							World of Tanks Tactics
-						<% } else if (game == 'wows') { %>
-							World of Warships Tactics
-						<% } else if (game == 'blitz') { %>
-							World of Tanks Blitz Tactics
-						<% } else if (game == 'aw') { %>
-							Armored Warfare Tactics
-						<% } else if (game == 'lol') { %>
-							League of legends Tactics
-						<% } else if (game == 'hots') { %>
-							Heroes of the Storm Tactics
-						<% } else if (game == 'sc2') { %>
-							Starcraft II Tactics
-						<% } else if (game == 'csgo') { %>
-							CS:GO Tactics
-						<% } else if (game == 'warface') { %>
-							Warface Tactics
-						<% } else if (game == 'squad') { %>
-							Squad Tactics
-						<% } else if (game == 'R6') { %>
-							Rainbox Six | Siege Tactics
-						<% } else if (game == 'MWO') { %>
-							Mech Warrior Online Tactics
-						<% } else if (game == 'EC') { %>
-							Eternal Crusade Tactics
-						<% } else if (game == 'propilkki2') { %>
-							Propilkki 2 Tactics
-						<% } else if (game == 'pr') { %>
-							Project Reality Tactics
-						<% } else if (game == 'clans') { %>
-							Clash of Clans Tactics
-						<% } else if (game == 'steelocean') { %>
-							Steel Ocean Tactics
-						<% } else if (game == 'foxhole') { %>
-							Foxhole Tactics
-						<% } %>	
+					Mech Warrior: Online - Tactics
 					</h1>
 					<div id="quote"></div><br />
 					<p><a class="btn btn-primary btn-lg new_room" href="<%=game%>2" role="button"><%= l('Create new room') %> &raquo;</a>
@@ -90,78 +54,38 @@
 			<div style="padding-left:20px; padding-right:20px;">
 				<div class="row">
 					<div class="col-md-4">
-						<h2>What is <%=url.split('/')[0]%> &#63;</h2>
-						<p><%=url.split('/')[0]%> is an interactive map tactic planning tool for <%=game.toUpperCase()%>.
+						<h2>What is mwotactics&#63;</h2>
+						<p>mwotactics is an interactive map tactic planning tool for Mechwarrior: Online. It is based on <a href="https://github.com/karellodewijk/wottactics">wottactics</a> by kalith.
 						
-						<p><h4><b>So how does it work ?</b></h4>
+						<p><h4><b>So how does it work?</b></h4>
 						
 						<p>Press the blue button. Then select a <%=game%> map and use the tools on the right to start planning your strategy. You can invite others by sending them the link. 
+
+						<p><h4><b>Who is behind this?</b></h4>
+						<p>This website is maintained by <a href="mailto:mwo@redimp.de">Red Imp</a>. The map grafix are copyright to Mechwarrior: Online (c) 2012-2019 Piranha Games Inc. The maps are made by Neteye, with the help of Camron Lyraus, Sanjue, ... .</p>
+						<p>To set up an updated tool for the MWO Comp community was an idea by Live1991.
 					</div>
 					<div class="col-md-4">
-						<h2>Your input matters</h2>
-						<p>Take 5 mins to take this very short <a href="https://docs.google.com/forms/d/1HvU6HrJVuLsRqI1cx5YLzZd011rUt_EirMU3BGgySrA/viewform">survey</a>, and let met know what you want in <%=url.split('/')[0]%>. I'll leave it up for at least two weeks and then release the results.</p>
-						
-						<p>After you have filled it in, take a look at the <a href="https://docs.google.com/forms/d/1HvU6HrJVuLsRqI1cx5YLzZd011rUt_EirMU3BGgySrA/viewanalytics?usp=form_confirm">summary</a> of the results
-						
-						<p>If you have a question or a problem, use the forums or e-mail me directly, I can't answer to your questions in the survey as it's anonymous and I have no way of contacting you.
+						<h2>Your input matters!</h2>
+						<h4><b>I found a bug!</b></h4>
+						<p>Please file bugs in the github repository <a href="https://github.com/redimp/mwotactics/issues">https://github.com/redimp/mwotactics/issues</a>.
+						<h4><b>A maps is missing or needs an update!</b></h4>
+						<p>You can help to update a map: The best way is to drop in a lobby, with on mech in each lance (of different weightclasses for the ease of knowing which one is Alpha Bravo and Charlie), open battlegrid after dropping from the dropship and make a screenshot. Higher resolution/zoomed in = more precise maps, also counts for the objectives (you can zoom in the battlegrid).
+						Then upload it somewhere (e.g. <a href="https://imgur.com/upload">imgur</a>, and tell us about it, either via <a href="mailto:mwo@redimp.de">mail</a> or in the <a href="https://discord.gg/6wxM5hC">MWO Comp Discord</a>.
 					</div>	
 					<div class="col-md-4">					
-						<h2>Changes to rendering</h2>
-						<p>The entire window is a rendering window now, with the ui semi-transparant and layered on top. it's very obvious if you zoom in a bit.
-						
-						<p>I've tested it obviously but there's a fair bit of changes under the hood, let me know if you run into any issues. 
-					</div>			
-				</div>
-				<div class="row">
-
-					<div class="col-md-4">
-						<h2>Latest changes</h2>
+						<h2>MWO Comp</h2>
+						<p>If you are interested in competetive MWO playing, you find players, leagues and a bunch of support in the MWO Comp hub.</p>
 						<p>
 						<ul>
-							<li>Border is now fully usable.
-							<li>Updated wows and squad maps
-							<li>Added the option to upload your own icons
-							<li>Added now wot 9.17.1 minimaps
-							<li>Added upload map option
+						<li><a href="https://discord.gg/6wxM5hC">Discord Server</a></li>
+						<li><a href="https://www.twitch.tv/mwoleagues">Twitch</a> and <a href="https://www.twitch.tv/mwoleagues2">2nd Twitch</a></li>
+						<li><a href="https://www.youtube.com/channel/UCuRj16BDeEO7fJWa4Rx4ozQ">Youtube Channel</a></li>
+						<li><a href="https://www.youtube.com/c/incomingmissilepodcast">Incoming Missile Podcast</a></li>
+						<li><a href="https://www.facebook.com/MWOCOMP">Facebook</a></li>
 						</ul>
-						<p>On the bug hunting front:
-						<ul>
-							<li>Wot stats for people who had their account reset are now processed properly
-							<li>Exporting now crops transparant background
-							<li>Sometimes drag cursor would revert back over a select box
-							<li>Changing account now also changes account on the forum without the need to log out
-							<li>Fixed twitter login on domains other than wottactic.tk
-						</ul>
-						<p>If you find anything else, however small, that is broken, pls let me know. 
-					</div>
-					<%if (game == 'warface') { %>
-						<div class="col-md-4">
-							<h2>Looking for help with warface maps</h2>
-							<p>The warface map images are a little inconsistent but it's the best I could find. If you know of any site with consistent, good quality maps for warface. Or if you want to create those maps for warface, please get in touch.
-						</div>
-					<%} else { %>
-						<%if (game != 'wot') { %>
-						<div class="col-md-4">
-							<h2>Forums back up</h2>
-							<p>Feel free to say hello.
-						</div>
-						<% } else { %>
-						<div class="col-md-4">
-							<h2>Yet another stats tracker for wot</h2>
-							<p>I've added a player stats tracked to the website. It's pretty basic at the moment, and it's still gathering historical info. But feel free to take a look. A clan stats page/option is also coming.
-							<p>There's also an ad on the new page. This does not mean there will be ads on the tactic planner page. But it should cover the hosting cost with a little luck. Even with some donations, wottactic has been running at a bit of a loss, not even counting manhours.
-							<p>Ads are disabled for everyone who donated ofcourse or anyone who donates anything in the future. It does require you to log back in.
-						</div>
-						<% } %>	
-					<% } %>						
-				</div>
-				<div class='row'>
-					<div class='col-md-6'>
-						<%=l('Developed by')%> <a href="mailto:pkalith@gmail.com">Kalith</a>
-					</div>
-					<div class='col-md-6' style='text-align:right;'>
-						<a href="older_news.html">Older news</a>
-					</div>
+						</p>
+					</div>			
 				</div>
 			</div>
 		</div>
