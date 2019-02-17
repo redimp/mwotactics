@@ -8,11 +8,15 @@ services:
       - MONGODB_USERNAME=wottactics
       - MONGODB_PASSWORD=wottactics
       - MONGODB_DATABASE=wottactics
+    volumes:
+       - mongodb-data:/bitnami
   # redis server
   redis:
     image: 'bitnami/redis:latest'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - redis-data:/bitnami/redis/data
   # wottactis nodejs app
   nodejs:
     build:
@@ -29,5 +33,10 @@ services:
       - ./views:/usr/src/app/views
       - ./public:/usr/src/app/public
       - ./helper:/helper
+
+# these volumes are necessary to make the data persitent
+volumes:
+  mongodb-data:
+  redis-data:
 
 # vim:set et ts=8 sts=2 sw=2 ai fenc=utf-8:
