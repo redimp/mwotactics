@@ -41,8 +41,17 @@ var tank_quotes = ['“Time for some suprise butt sex, best kind of butt sex” 
 
 var ship_quotes = ['“There is no such thing as a friendly torpedo” - The Mighty Jingles'];
 
+var mwo_quotes = 
+	[
+	'"Friendly fire is not." - Unknown Mechwarrior',
+	'"Welcome to Artillery Strike: Online." - Unknown Mechwarrior',
+	];
+
 var quotes;
-if (game == "wows") {
+
+if (game == "mwo" || game == "MWO") {
+	quotes = general_quotes.concat(mwo_quotes);
+} else if (game == "wows") {
 	quotes = general_quotes.concat(ship_quotes);
 } else {
 	quotes = general_quotes.concat(tank_quotes);
