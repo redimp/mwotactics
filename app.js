@@ -299,6 +299,7 @@ MongoClient.connect(connection_string, {reconnectTries:99999999}, function(err, 
 	
 	//returns host without subdomain
 	function get_host(req) {
+		return req.hostname;
 		var host = req.hostname.split('.');
 		if (host.length >= 2) {
 			host = host[host.length-2] + '.' + host[host.length-1];
