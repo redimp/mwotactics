@@ -1272,7 +1272,7 @@ MongoClient.connect(connection_string, {reconnectTries:99999999}, function(err, 
         break;
       default:
         room.slides[slide0_uid].entities[background_uid] = {uid:background_uid, type:'background', path:"", z_index:0};
-        room.locked = true;
+        room.locked = false;
 		}
 		room.active_slide = slide0_uid;
 		room.trackers = {};
