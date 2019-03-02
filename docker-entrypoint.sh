@@ -15,7 +15,7 @@ cat <<EOF >/usr/src/app/secrets.txt
 	"port":80,
 	"ga_id":"",
 	"adsense_id": "",
-	"upload_path":"http://forum.wottactic.com/upload/",
+	"upload_path":"//forum.wottactic.com/upload/",
 	
 	"facebook": {
 		"client_id": "", 
