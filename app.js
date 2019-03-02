@@ -1166,6 +1166,20 @@ MongoClient.connect(connection_string, {reconnectTries:99999999}, function(err, 
 		log_data += "#clients: " + io.engine.clientsCount + "<br />\n";	
 		res.send(log_data);
 	});
+
+	// metrics for prometheus
+	router.get('/metrics', function(req, res, next) {
+		var log_data = "Active rooms: " + Object.keys(room_data).length + "<br />\n";
+		log_data += "#clients: " + io.engine.clientsCount + "<br />\n";	
+		var metrics = "# HELP tactics_active_rooms Number of active map rooms\n"
+		metrics    += "# TYPE tactics_active_rooms gauge\n"
+		metrics    += "tactics_active_rooms "+ Object.keys(room_data).length +"\n"
+		metrics    += "# HELP tactics_clients Number of connected clients\n"
+		metrics    += "# TYPE tactics_clients gauge\n"
+		metrics    += "tactics_clients " + io.engine.clientsCount + "\n";
+		res.header('Content-Type', 'text/plain');
+		res.send(metrics);
+	});
 	
 	//reloads templates, so I don't have to restart the server to add basic content
 	var lastmod = (new Date()).toISOString().substr(0,10);
