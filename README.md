@@ -19,7 +19,7 @@ To update a map, just replace the file found in `public/maps/MWO/` and the grid 
 
 To add a map, copy it to `public/maps/MWO/` and update `views/MWO_maps.ejs`. The `data-size` field has to be set for the correct distance measurement. The easierst way is to set it to `1000x1000`, measure the length of the grid box `l`. 
 
-With `(500 / l) * 1000` ypu can calculate the new datasize, e.g. with `l = 125`
+With `(500 / l) * 1000` you can calculate the new datasize, e.g. with `l = 125`
 
 `(500 / 125) * 1000 = 4000`. Set `data-size="4000x4000"`.
 
