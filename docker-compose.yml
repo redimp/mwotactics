@@ -12,6 +12,7 @@ services:
        - mongodb-data:/bitnami
   # redis server
   redis:
+    restart: always
     image: 'bitnami/redis:latest'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
@@ -19,6 +20,7 @@ services:
       - redis-data:/bitnami/redis/data
   # wottactis nodejs app
   nodejs:
+    restart: always
     build:
       context: .
     depends_on:
