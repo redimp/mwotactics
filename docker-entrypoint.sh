@@ -11,7 +11,7 @@ cat <<EOF >/usr/src/app/secrets.txt
 	"admin_password": "wottactics",
 	"socket_io_servers": "",
 	"static_host": "",
-	"redis_options": {"host": "redis", "port": 6379, "pass":""},
+	"redis_options": {"host": "redis", "port": 6379, "pass":"wottactics"},
 	"port":80,
 	"ga_id":"",
 	"adsense_id": "",
